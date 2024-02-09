@@ -13,6 +13,9 @@ function handleDoubleClick() {
 function handleMouseEnter() {
     console.log("mouse is entered");
 }
+function handleMouseLeave() {
+    console.log("mouse is leaved");
+}
 function Button() {
  return (
     <div>
@@ -21,7 +24,8 @@ function Button() {
       <h5 onClick={handleClick}>Bye</h5>
       <p onMouseOver={handleMouseOver}>Hello everyone my name is Rajia Rani ....</p>
       <button onDoubleClick={handleDoubleClick}>Double times click me</button>
-      <p onMouseEnter={handleMouseEnter}></p>
+      <p onMouseEnter={handleMouseEnter}> Aplly the mouse entered functionallity</p>
+      <p onMouseEnter={handleMouseLeave}> Aplly the mouse leavedfunctionallity</p>
     </div>
  )
 }
