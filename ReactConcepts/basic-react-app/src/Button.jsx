@@ -10,6 +10,9 @@ function handleMouseOver() {
 function handleDoubleClick() {
     console.log("this is double Clicked event");
 }
+function handleMouseEnter() {
+    console.log("mouse is entered");
+}
 function Button() {
  return (
     <div>
@@ -18,6 +21,7 @@ function Button() {
       <h5 onClick={handleClick}>Bye</h5>
       <p onMouseOver={handleMouseOver}>Hello everyone my name is Rajia Rani ....</p>
       <button onDoubleClick={handleDoubleClick}>Double times click me</button>
+      <p onMouseEnter={handleMouseEnter}></p>
     </div>
  )
 }
