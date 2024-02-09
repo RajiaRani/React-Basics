@@ -1,12 +1,13 @@
-function handleFormSubmit(){
+function handleFormSubmit(event){
+    event.preventDefault();
     console.log("form was submitted");
 }
 
 function Form() {
-    retrun (
-        <form>
+    return (
+        <form onSubmit={handleFormSubmit}>
             <input placeholder="write something"/>
-            <button onClick={handleFormSubmit}>Submit</button>
+            <button>Submit</button>
         </form>
     );
 }
