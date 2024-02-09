@@ -1,13 +1,15 @@
 import Product from "./Product";
 function ProductTab() {
-    let authors = ["Rajia Rani", "chenchu reddy", "shiva reddy", "geet"];
+    // let authors = ["Rajia Rani","Checnhu Reddy","Shiva Reddy"];
     // let authors2 = { a:"rajia rani", b: "checnhu reddy", c:"shiva reddy", d:"geet" };
+
+
     return (
         <>
-        <Product title="God is beautiful!!" description="just faith in it" price={200/2} author={"Rajia Rani"} />
-        <Product title="Word is beautiful!!" description="just faith in it" price={200*3} author={"Checnhu Reddy"}/>
-        <Product title="Mother is beautiful!!" description="just faith in it" price={200-10} author={"Shiva Reddy"}/>
-        <Product title="Hardwork is beautiful!!" description="just faith in it" price={20000+1233} author={"Geet Kaur"}/>
+        <Product title="God is beautiful!!" description="just faith in it" price={200/2}/>
+         <Product title="Word is beautiful!!" description="just faith in it" price={200*3} />
+        <Product title="Mother is beautiful!!" description="just faith in it" price={200-10} />
+        <Product title="Hardwork is beautiful!!" description="just faith in it" price={20000+1233} /> 
         </>
     )
 }
