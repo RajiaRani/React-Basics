@@ -1,7 +1,9 @@
-function handleClick() {
+function handleClick(event) {
     console.log("Hello");
+    console.log(event);
 }
-function handleClick(){
+
+function handleClick2(){
     console.log("Bye Bye!!");
 }
 function handleMouseOver() {
@@ -21,7 +23,7 @@ function Button() {
     <div>
 
      <button onClick={handleClick}>Click Me</button>
-      <h5 onClick={handleClick}>Bye</h5>
+      <h5 onClick={handleClick2}>Bye</h5>
       <p onMouseOver={handleMouseOver}>Hello everyone my name is Rajia Rani ....</p>
       <button onDoubleClick={handleDoubleClick}>Double times click me</button>
       <p onMouseEnter={handleMouseEnter}> Aplly the mouse entered functionallity</p>
