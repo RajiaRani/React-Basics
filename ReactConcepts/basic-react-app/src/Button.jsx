@@ -1,19 +1,19 @@
-function printHello() {
+function handleClick() {
     console.log("Hello");
 }
-function printBye(){
+function handleClick(){
     console.log("Bye Bye!!");
 }
-function saySometing() {
+function handleMouseOver() {
     console.log("Say something");
 }
 function Button() {
  return (
     <div>
 
-     <button onClick={printHello}>Click Me</button>
-      <h5 onClick={printBye}>Bye</h5>
-      <p onClick={saySometing}>Hello everyone my name is Rajia Rani ....</p>
+     <button onClick={handleClick}>Click Me</button>
+      <h5 onClick={handleClick}>Bye</h5>
+      <p onMouseOver={handleMouseOver}>Hello everyone my name is Rajia Rani ....</p>
     </div>
  )
 }
