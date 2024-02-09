@@ -1,6 +1,6 @@
 
 import './App.css'
-import Counter from './Counter.jsx'
+import Counter from './Counter'
 function App() {
 
   return (
@@ -11,4 +11,4 @@ function App() {
   )
 }
 
-export default App
+export default App;
