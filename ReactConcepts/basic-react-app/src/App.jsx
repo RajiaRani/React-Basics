@@ -1,10 +1,14 @@
 
 import './App.css'
-import ProductTab from './ProductTab'; "./ProductTab.jsx";
-
+import ProductTab from "./ProductTab.jsx";
+// import MsgBox from "./MsgBox.jsx";
 function App() {
-  return <ProductTab/>
-  
+return (
+  <>
+  <MsgBox username="Rajia" textColor="Blue"/>
+ <ProductTab/>
+  </>
+)
 }
 
-export default App
+export default App;
