@@ -3,11 +3,18 @@ import { useState } from "react"
 export default function shoppingBag() {
     let [items, setItems] = useState({shoe:0, bags:0, lipsticks:0});
     let updateItems = () => {
-        setItems(items+1);
+        console.log(`shop count = ${items.shoe}`);
+        console.log(`shop count = ${items.bags}`);
+        console.log(`shop count = ${items.lipsticks}`);
+     
+        setItems((prevItems) => {
+            return ({...prevItems, shoe:prevItems.shoe+1});
+        })
+        
     }
     return (
         <div>
-            <p>{items.shoe}</p>
+            <p>{(items.shoe)}</p>
             <p><i className="fa-solid fa-cart-shopping" style={{fontSize:"3rem"}}></i></p>  
         <div className="shopping">
          <button onClick={updateItems}>Shoe</button>  &nbsp; &nbsp;
