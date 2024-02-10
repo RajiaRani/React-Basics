@@ -2,15 +2,15 @@
 import './App.css'
 import LudoBoard from './LudoBoard'
 import ShoppingBag from './shoppingBag'
-import arrayState from './arrayState'
+import ArrayState from './arrayState'
 function App() {
  
   return (
     <>
       {/* <LudoBoard/> */}
 
-      {/* <ShoppingBag/> */}
-      <arrayState/>
+       <ShoppingBag/> 
+      {/* <ArrayState/> */}
     </>
   )
 }
