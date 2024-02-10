@@ -5,6 +5,7 @@ export default function ludoBoard() {
 
     let updateBlue = () => {
         console.log(`blue moves = ${moves.blue}`);
+        //jab bhi new value old value pr depends karti hai tab hum callback use karte hai
         setMoves((prevMoves) => {
             return ({ ...prevMoves, blue: prevMoves.blue + 1 });
         })
