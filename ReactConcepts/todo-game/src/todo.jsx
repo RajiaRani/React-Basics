@@ -2,7 +2,7 @@ import { useState } from "react";
 import { v4 as uuidv4 } from 'uuid';
 
 export default function TodoList() {
-    let [todos, setTodos] = useState([{task:"sample task", id:uuidv4()} ]);
+    let [todos, setTodos] = useState([{task:"sample task", id:uuidv4(), mark:"false"} ]);
     let [newTodo, setNewTodo] = useState("");
 
     let addTask = () => {
@@ -34,9 +34,21 @@ export default function TodoList() {
     );
     }
 
-    let upperCaseOne = () => {
-        console.log(one)
-    }
+    let upperCaseOne = (id) => {
+        //console.log("one")
+        setTodos ((todos) => 
+            todos.map((todo) => {
+                if(todo.id == id){
+                    return {
+                        ...todo,
+                        task:todo.task.toUpperCase(),
+                    };
+                } else {
+                    return todo;
+                }
+            })
+        )
+    };
 
     return (
         <div>
