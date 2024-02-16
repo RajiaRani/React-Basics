@@ -79,7 +79,7 @@ export default function TodoList() {
             <ul>
                 {todos.map((todo) => (
                     <li key={todo.id}>
-                    <span>{todo.task}</span> 
+                    <span style={todo.isDone ? {textDecoration:"line-through"}: {}}>{todo.task}</span> 
                     &nbsp;&nbsp;&nbsp;
                     <span><button onClick={() => deleteTodo(todo.id)}>Delete</button></span> &nbsp;
                     <span><button onClick={() => upperCaseOne(todo.id)}>Uppercase one</button></span> &nbsp;
