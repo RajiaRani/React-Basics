@@ -31,7 +31,10 @@ export default function TodoList() {
             <h4>Tasks Todo</h4>
             <ul>
                 {todos.map((todo) => (
-                    <li key={todo.id}>{todo.task}</li>
+                    <li key={todo.id}>
+                    <span>{todo.task}</span>
+                    <span><button>Delete</button></span>
+                    </li>
                 ))}
             </ul>
         </div>
