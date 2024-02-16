@@ -2,7 +2,7 @@ import { useState } from "react";
 import { v4 as uuidv4 } from 'uuid';
 
 export default function TodoList() {
-    let [todos, setTodos] = useState([{task:"sample task", id:uuidv4(), mark:"false"} ]);
+    let [todos, setTodos] = useState([{task:"sample task", id:uuidv4(), isDone:"false"} ]);
     let [newTodo, setNewTodo] = useState("");
 
     let addTask = () => {
@@ -50,6 +50,21 @@ export default function TodoList() {
         )
     };
 
+
+    let markDone = (id) => {
+       setTodos ( (todos) =>
+        todo.map((todo) => {
+            if(todo.id == id) {
+                return {
+                    ...todo,
+                    isDone:true,
+                };
+            } else {
+                return todo;
+            }
+        })
+    )
+    }
     return (
         <div>
             <input 
@@ -67,7 +82,8 @@ export default function TodoList() {
                     <span>{todo.task}</span> 
                     &nbsp;&nbsp;&nbsp;
                     <span><button onClick={() => deleteTodo(todo.id)}>Delete</button></span> &nbsp;
-                    <span><button onClick={() => upperCaseOne(todo.id)}>Uppercase one</button></span>
+                    <span><button onClick={() => upperCaseOne(todo.id)}>Uppercase one</button></span> &nbsp;
+                    <span><button onClick={() => markDone(todo.id)}>Marked</button></span>
                     </li>
                 ))}
             </ul>
