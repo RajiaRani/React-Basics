@@ -50,7 +50,8 @@ export default function TodoList() {
                     <li key={todo.id}>
                     <span>{todo.task}</span> 
                     &nbsp;&nbsp;&nbsp;
-                    <span><button onClick={() => deleteTodo(todo.id)}>Delete</button></span>
+                    <span><button onClick={() => deleteTodo(todo.id)}>Delete</button></span> &nbsp;
+                    <span><button>Uppercase one</button></span>
                     </li>
                 ))}
             </ul>
