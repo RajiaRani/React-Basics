@@ -2,14 +2,14 @@ import { useState } from "react";
 import { v4 as uuidv4 } from 'uuid';
 
 export default function TodoList() {
-    let [todos, setTodos] = useState([{task:"sample task", id:uuidv4(), isDone:"false"} ]);
+    let [todos, setTodos] = useState([{task:"sample task", id:uuidv4(), isDone:false} ]);
     let [newTodo, setNewTodo] = useState("");
 
     let addTask = () => {
     //console.log("we have to add new tesk in todo.");
     //passing the callback
     setTodos((prevTodo) => {
-        return [...todos, { task: newTodo, id: uuidv4()}];
+        return [...todos, { task: newTodo, id: uuidv4(), isDone: false}];
     });
     setNewTodo("");
     }
@@ -53,7 +53,7 @@ export default function TodoList() {
 
     let markDone = (id) => {
        setTodos ( (todos) =>
-        todo.map((todo) => {
+        todos.map((todo) => {
             if(todo.id == id) {
                 return {
                     ...todo,
@@ -64,6 +64,17 @@ export default function TodoList() {
             }
         })
     )
+    };
+
+    let markedAll = () => {
+        setTodos( (todos) =>
+        todos.map((todo) => {
+        return {
+           ...todo,
+           isDone:true,
+        };
+      })
+  );
     }
     return (
         <div>
@@ -89,6 +100,7 @@ export default function TodoList() {
             </ul>
             <br /> <br />
             <button onClick={upperCase}>Uppercase</button>
+            <button onClick={markedAll}>Marked All</button>
         </div>
     )
 }
