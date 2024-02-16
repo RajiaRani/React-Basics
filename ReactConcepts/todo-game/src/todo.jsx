@@ -7,7 +7,10 @@ export default function TodoList() {
 
     let addTask = () => {
     //console.log("we have to add new tesk in todo.");
-    setTodos([...todos, { task: newTodo, id: uuidv4()}]);
+    //passing the callback
+    setTodos((prevTodo) => {
+        return [...todos, { task: newTodo, id: uuidv4()}];
+    });
     setNewTodo("");
     }
 
