@@ -6,9 +6,7 @@ import TicketNumber from './ticketNum'
 function App() {
    return (
    <>
-   <TicketNumber num={5} />
-   <TicketNumber num={3} />
-   <TicketNumber num={2} />
+   <Ticket num={[2,5,6]} />
    </>
    );
 }
