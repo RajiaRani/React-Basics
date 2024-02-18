@@ -7,7 +7,7 @@ export default function Form() {
 let [formData, setFormData] = useState({
     fullName:"",
     userName:"",
-    
+    phoneNumber:"",
 })
 
 //   let hanadleNameChange=(event) => {
@@ -36,6 +36,7 @@ let handleSubmit = (event) => {
     setFormData({
         fullName:"",
         userName:"",
+        phoneNumber:"",
     });
 };
 
@@ -59,7 +60,15 @@ let handleSubmit = (event) => {
         name="userName"
          />
          <br /> <br />
-        <input type="number" placeholder="Enter your roll number" />
+         <label htmlFor="phoneNuber">PhoneNumber</label>
+        <input 
+        type="number" 
+        placeholder="Enter your roll number"
+        id="phoneNumber"
+        name="phoneNumber"
+        value={formData.phoneNumber}
+        onChange={handleInputChange}
+         />
         <br /> <br />
         <button>Submit</button>
     </form>
