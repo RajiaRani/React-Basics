@@ -14,9 +14,9 @@ export default function Lottery() {
         <div>
             <h1>Lottery Game!</h1>
             <div className="ticket">
-                {/* <span>{ticket[0]}</span>
+                 <span>{ticket[0]}</span>
                 <span>{ticket[1]}</span>
-                <span>{ticket[2]}</span> */}
+                <span>{ticket[2]}</span> 
             </div>
             <br/>
             <button onClick={buyTicket} style={{backgroundColor:"grey", color:"white"}}>Buy new ticket</button>
