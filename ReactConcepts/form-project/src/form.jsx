@@ -25,8 +25,9 @@ let handleInputChange = (event) => {
     console.log(newValve)
 
     setFormData((currData) => {
-        currData[fieldName] = newValve;
-        return {...currData};
+        // currData[fieldName] = newValve;
+        // return {...currData};
+        return { ...currData, [fieldName]:newValve};
     });
 };
 
