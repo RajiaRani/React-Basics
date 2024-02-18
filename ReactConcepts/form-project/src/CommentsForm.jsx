@@ -34,6 +34,7 @@ export default function CommentsForm() {
                 id="username"
                 onChange={handleInputChange}
                 onSubmit={handleSubmit}
+                name="username"
                 /> <br /> <br />
 
                 <label htmlFor="remarks">Remarks:</label>
@@ -43,6 +44,7 @@ export default function CommentsForm() {
                 id="remarks"
                 onChange={handleInputChange}
                 onSubmit={handleSubmit}
+                name="remarks"
                 ></textarea>  <br /> <br />
 
                 <label htmlFor="rating">Rating:</label>
@@ -53,6 +55,7 @@ export default function CommentsForm() {
                  id="rating"
                  onChange={handleInputChange}
                  onSubmit={handleSubmit}
+                 name="rating"
                  />  <br /> <br />
                 <button>Add Comment</button>
             </form>
