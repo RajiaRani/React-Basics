@@ -15,17 +15,18 @@ export default function CommentsForm() {
 
     let handleSubmit = (event) =>{
         console.log(formData);
-        event.preventDefault({
+        event.preventDefault();
+        setFormData({
             username:"",
             remarks:"",
             rating:""
-        });
-    }
+            });
+    };
 
     return (
         <div>
             <h4>Give a Comment:</h4>
-            <form action="">
+            <form onSubmit={handleSubmit}>
                 <label htmlFor="username">Username:</label>
                 <input 
                 type="text" 
@@ -33,7 +34,6 @@ export default function CommentsForm() {
                 value={formData.username}
                 id="username"
                 onChange={handleInputChange}
-                onSubmit={handleSubmit}
                 name="username"
                 /> <br /> <br />
 
@@ -43,7 +43,6 @@ export default function CommentsForm() {
                 value={formData.remarks}
                 id="remarks"
                 onChange={handleInputChange}
-                onSubmit={handleSubmit}
                 name="remarks"
                 ></textarea>  <br /> <br />
 
@@ -54,7 +53,6 @@ export default function CommentsForm() {
                  value={formData.rating}
                  id="rating"
                  onChange={handleInputChange}
-                 onSubmit={handleSubmit}
                  name="rating"
                  />  <br /> <br />
                 <button>Add Comment</button>
