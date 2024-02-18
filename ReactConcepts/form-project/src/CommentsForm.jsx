@@ -6,6 +6,7 @@ export default function CommentsForm() {
                 <input type="text" placeholder="username" /> <br /> <br />
                 <textarea>Remarks</textarea>  <br /> <br />
                 <input type="number" placeholder="rating" />  <br /> <br />
+                <button>Add Comment</button>
             </form>
         </div>
     )
