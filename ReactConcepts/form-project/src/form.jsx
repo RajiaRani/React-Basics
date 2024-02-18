@@ -32,6 +32,10 @@ let handleInputChange = (event) => {
 
 let handleSubmit = (event) => {
     event.preventDefault();
+    setFormData({
+        fullName:"",
+        userName:"",
+    });
 };
 
   return (
