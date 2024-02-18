@@ -1,10 +1,15 @@
 import { useState , useEffect} from "react"
 
 export default function Counter() {
-    let [count, setCount] = useState(0);
+    let [countX, setCountX] = useState(0);
+    let [countY, setCountY] = useState(0);
 
-    let incCount = () => {
-        setCount((currCount) => currCount + 1)
+    let incCountX = () => {
+        setCountX((currCount) => currCount + 1)
+    };
+
+    let incCountY = () => {
+        setCountY((currCount) => currCount + 1)
     };
    
     useEffect(function printSomething(){
@@ -13,8 +18,11 @@ export default function Counter() {
 
     return (
         <div>
-            <h3>Count = {count}</h3>
-            <button onClick={incCount}>+1</button>
+            <h3>countX = {countX}</h3>
+            <button onClick={incCountX}>+1</button>
+
+            <h3>countY = {countY}</h3>
+            <button onClick={incCountY}>+1</button>
         </div>
     )
 }
