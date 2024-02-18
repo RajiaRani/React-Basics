@@ -9,7 +9,13 @@ export default function Form() {
 
   return (
     <form>
-        <input type="text" placeholder="Enter your full name"  value={fullName} onChange={hanadleNameChange}/>
+        <label htmlFor="usernmae">Full legal name:</label>
+        <input type="text" 
+        placeholder="Enter your full name"  
+        value={fullName} 
+        onChange={hanadleNameChange}
+        id={username}
+        />
         <br /> <br />
         <input type="number" placeholder="Enter your roll number" />
         <br /> <br />
