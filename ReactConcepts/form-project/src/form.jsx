@@ -13,12 +13,12 @@ let handleUsername = (event) => {
 }
   return (
     <form>
-        <label htmlFor="username">FullName:</label>
+        <label htmlFor="fullname">FullName:</label>
         <input type="text" 
         placeholder="Enter your full name"  
         value={fullName} 
         onChange={hanadleNameChange}
-        id="username"
+        id="fullname"
         />
         <br /> <br />
         <label htmlFor="username">Username</label>
