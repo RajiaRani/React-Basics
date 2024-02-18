@@ -7,6 +7,7 @@ export default function Form() {
 let [formData, setFormData] = useState({
     fullName:"",
     userName:"",
+    
 })
 
 //   let hanadleNameChange=(event) => {
@@ -19,8 +20,16 @@ let [formData, setFormData] = useState({
 
 let handleInputChange = (event) => {
     let fieldName = event.target.name;
+    let newValve =  event.target.value;
     console.log(fieldName);
-}
+    console.log(newValve)
+
+    setFormData((currData) => {
+        currData[fieldName] = newValve;
+        return {...currData};
+    });
+};
+
   return (
     <form>
         <label htmlFor="fullname">FullName:</label>
