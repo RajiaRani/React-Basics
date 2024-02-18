@@ -1,3 +1,3 @@
 export default function TicketNumber({num}) {
-  return (<span>{num}</span>)
+  return (<span className="ticketNum">{num}</span>)
 }
