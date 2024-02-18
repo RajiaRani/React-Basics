@@ -5,7 +5,7 @@ import Form from './form'
 function App() {
 return (
  <>
-  <Form/>
+  {/* <Form/> */}
   <CommentsForm/>
  </>
 )

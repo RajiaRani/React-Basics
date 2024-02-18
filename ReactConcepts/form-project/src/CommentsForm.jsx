@@ -26,7 +26,7 @@ export default function CommentsForm() {
         <div>
             <h4>Give a Comment:</h4>
             <form action="">
-                <label htmlFor="username"></label>
+                <label htmlFor="username">Username:</label>
                 <input 
                 type="text" 
                 placeholder="username"  
@@ -36,7 +36,7 @@ export default function CommentsForm() {
                 onSubmit={handleSubmit}
                 /> <br /> <br />
 
-                <label htmlFor="remarks"></label>
+                <label htmlFor="remarks">Remarks:</label>
                 <textarea 
                 placeholder="remarks add few" 
                 value={formData.remarks}
@@ -45,7 +45,7 @@ export default function CommentsForm() {
                 onSubmit={handleSubmit}
                 ></textarea>  <br /> <br />
 
-                <label htmlFor="rating"></label>
+                <label htmlFor="rating">Rating:</label>
                 <input type="number" 
                 placeholder="rating" 
                  min={1} max={5} 
