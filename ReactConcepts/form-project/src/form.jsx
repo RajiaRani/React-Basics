@@ -30,8 +30,12 @@ let handleInputChange = (event) => {
     });
 };
 
+let handleSubmit = (event) => {
+    event.preventDefault();
+};
+
   return (
-    <form>
+    <form onSubmit={handleSubmit}>
         <label htmlFor="fullname">FullName:</label>
         <input type="text" 
         placeholder="Enter your full name"  
