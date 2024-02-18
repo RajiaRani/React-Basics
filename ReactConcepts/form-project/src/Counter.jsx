@@ -14,8 +14,7 @@ export default function Counter() {
    
     useEffect(function printSomething(){
         console.log("this is a side-effect")
-    },[countX]
-    );
+    },[]);
 
     return (
         <div>
