@@ -1,32 +1,44 @@
 import { useState } from "react"
 
 export default function Form() {
-  let [fullName, setFullName] = useState("rajia");
-  let [userName, setUserName] = useState("rajia");
+//   let [fullName, setFullName] = useState("rajia");
+//   let [userName, setUserName] = useState("rajia");
 
-  let hanadleNameChange=(event) => {
-    setFullName(event.target.value);
-  };
+let [formData, setFormData] = useState({
+    fullName:"",
+    userName:"",
+})
 
-let handleUsername = (event) => {
-    setUserName(event.target.value);
+//   let hanadleNameChange=(event) => {
+//     setFullName(event.target.value);
+//   };
+
+// let handleUsername = (event) => {
+//     setUserName(event.target.value);
+// }
+
+let handleInputChange = (event) => {
+    let fieldName = event.target.name;
+    console.log(fieldName);
 }
   return (
     <form>
         <label htmlFor="fullname">FullName:</label>
         <input type="text" 
         placeholder="Enter your full name"  
-        value={fullName} 
-        onChange={hanadleNameChange}
+        value={formData.fullName} 
+        onChange={handleInputChange}
         id="fullname"
+        name="fullName"
         />
         <br /> <br />
         <label htmlFor="username">Username</label>
         <input type="text" 
         placeholder="Enter username"
-        value={userName}
-        onChange={handleUsername}
+        value={formData.userName}
+        onChange={handleInputChange}
         id="username"
+        name="userName"
          />
          <br /> <br />
         <input type="number" placeholder="Enter your roll number" />
