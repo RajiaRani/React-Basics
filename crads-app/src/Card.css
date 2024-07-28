@@ -1,0 +1,21 @@
+.Card{
+  border: 1px solid hsl(0, 14%, 99%);
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+.Card:hover{
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
+}
+.title{
+   height: 25px;
+   text-align: start;
+   margin-left: 22px;
+   margin-bottom: 5px;
+}
+.shop{
+    text-align: start;
+    color: red;
+    padding-left: 22px;
+    margin-top: -30px;
+    font-size: 13px;
+}
