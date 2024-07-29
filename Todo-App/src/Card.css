@@ -1,0 +1,19 @@
+.card {
+    background-color: #f9f9f9;
+    color: #213547;
+    border-radius: 5px;
+    padding: 5px 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    box-sizing: border-box;
+    margin: 10px;
+}
+
+.card span {
+    font-size: 16px;
+}
+
+.card button {
+    margin-top: 10px;
+    margin-right: 5px;
+}
