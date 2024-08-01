@@ -1,5 +1,4 @@
 import React from 'react';
-
 export default function Question({ question, options, onAnswer }) {
     return (
         <div>
