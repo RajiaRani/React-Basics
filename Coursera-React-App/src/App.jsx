@@ -11,6 +11,11 @@ import './App.css'
 import Button from './Button.jsx';
 import StateButton from './StateButton.jsx';
 
+import HomePage from './Navbar/HomePage.jsx';
+import AboutPage from './Navbar/AboutPage.jsx';
+import ContactPage from './Navbar/ContactPage.jsx';
+import {Routes, Route, Link} from 'react-router-dom';
+
 function App() {
 
 
@@ -28,8 +33,15 @@ function App() {
        <Banana color="yellow" number="12"/>
      </Bag> */}
      {/* <Button/> */}
-     <StateButton/>
-      
+     {/* <StateButton/> */}
+     <Link to="/" className='nav-items'>Home</Link>
+     <Link to="/about-me" className='nav-items'>About-me</Link>
+     <Link to="/contact-me" className='nav-items'>Contact</Link>
+      <Routes>
+        <Route path="/" element={<HomePage/>} />
+        <Route path="/about-me" element={ <AboutPage/>} />
+        <Route path="/contact-me" element={<ContactPage/>} />
+      </Routes>
     </>
   )
 }
