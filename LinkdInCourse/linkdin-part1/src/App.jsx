@@ -10,6 +10,7 @@ import CheckedBox from './STATE/CheckBox.jsx';
 import Form from './STATE/Form.jsx';
 import Form2 from './STATE/Form2.jsx';
 import Datafetch from './STATE/fetchData.jsx';
+import GraphData from './STATE/GraphData.jsx';
 function App() {
 
 const dishes = [ "Apple pii", "Chicken soup", "Dosa", "Dal Makhani", "Mongo Pii"];
@@ -28,7 +29,8 @@ return (
      <Effect/> */}
      {/* <CheckedBox/> */}
      {/* <Form2/> */}
-     <Datafetch/>
+     {/* <Datafetch/> */}
+     <GraphData/>
    </>
    </div>
   )
